@@ -1,0 +1,231 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5qdvdxcbhns7"]
+
+[ext_resource type="Script" uid="uid://cvuvxm67idkhp" path="res://simu/editor.gd" id="1_wlowb"]
+
+[node name="editor" type="Node2D"]
+script = ExtResource("1_wlowb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(12, 12)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="sideBar" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.09900001
+anchor_bottom = 1.0
+offset_right = -0.04800415
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.52906674, 0.5290667, 0.5290667, 0.4509804)
+
+[node name="run" type="Button" parent="CanvasLayer/sideBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.105000004
+anchor_top = 0.051000003
+anchor_right = 0.77400005
+anchor_bottom = 0.102000006
+offset_left = 0.029999733
+offset_top = -0.048000336
+offset_right = 0.02999115
+offset_bottom = -0.09600067
+text = "run"
+
+[node name="noise" type="Button" parent="CanvasLayer/sideBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11400001
+anchor_top = 0.12200001
+anchor_right = 0.763
+anchor_bottom = 0.17300001
+offset_left = 0.0039987564
+offset_top = -0.056007385
+offset_right = 0.017997742
+offset_bottom = -0.104003906
+text = "noise"
+
+[node name="clear" type="Button" parent="CanvasLayer/sideBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11400001
+anchor_top = 0.19100001
+anchor_right = 0.754
+anchor_bottom = 0.24200001
+offset_left = -0.99600124
+offset_top = 0.231987
+offset_right = 0.04399872
+offset_bottom = 0.18399048
+text = "clear"
+
+[node name="LabelSpeed" type="Label" parent="CanvasLayer/sideBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11400001
+anchor_top = 0.259
+anchor_right = 0.92100006
+anchor_bottom = 0.29500002
+offset_left = 1.0039988
+offset_top = 0.16799927
+offset_right = 0.0059890747
+offset_bottom = -0.16000366
+text = "wait : 0.3"
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/sideBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.105000004
+anchor_top = 0.307
+anchor_right = 0.89500004
+anchor_bottom = 0.33200002
+offset_left = 1.0299997
+offset_top = 0.06399536
+offset_right = -0.030006409
+offset_bottom = -0.13601685
+max_value = 2.0
+step = 0.1
+value = 0.2
+
+[node name="save" type="Button" parent="CanvasLayer/sideBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.123
+anchor_top = 0.347
+anchor_right = 0.772
+anchor_bottom = 0.39800003
+offset_left = -0.022000313
+offset_top = 0.14399719
+offset_right = -0.008003235
+offset_bottom = 0.09597778
+text = "save"
+
+[node name="load" type="Button" parent="CanvasLayer/sideBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.123
+anchor_top = 0.423
+anchor_right = 0.772
+anchor_bottom = 0.47400004
+offset_left = -0.022000313
+offset_top = -0.104003906
+offset_right = -0.008003235
+offset_bottom = -0.15203857
+text = "load"
+
+[node name="library" type="Button" parent="CanvasLayer/sideBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.123
+anchor_top = 0.92
+anchor_right = 0.79800004
+anchor_bottom = 0.9710001
+offset_left = 2.9779997
+offset_top = -0.16003418
+offset_right = 0.027992249
+offset_bottom = -0.20806885
+text = "library"
+
+[node name="center" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.33800003
+anchor_top = 0.395
+anchor_right = 0.66700006
+anchor_bottom = 0.6
+offset_left = -0.3760376
+offset_top = 0.039993286
+offset_right = -0.3840332
+offset_bottom = 0.19998169
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5294118, 0.5294118, 0.5294118, 0.4509804)
+
+[node name="LineEditFile" type="LineEdit" parent="CanvasLayer/center"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09200001
+anchor_top = 0.36100003
+anchor_right = 0.586
+anchor_bottom = 0.59400004
+offset_left = 0.13199615
+offset_top = -0.013004303
+offset_right = -0.0940094
+offset_bottom = -0.0020065308
+
+[node name="ButtonConfirm" type="Button" parent="CanvasLayer/center"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.66200006
+anchor_top = 0.37600002
+anchor_right = 0.836
+anchor_bottom = 0.586
+offset_left = 0.10197449
+offset_top = -0.008003235
+offset_right = 0.15597534
+offset_bottom = 0.06199646
+text = "confirm"
+
+[node name="library" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.901
+anchor_top = 0.002
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.047973633
+offset_top = -0.296
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.52906674, 0.5290667, 0.5290667, 0.4509804)
+
+[node name="glider" type="Button" parent="CanvasLayer/library"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.105000004
+anchor_top = 0.051000003
+anchor_right = 0.77400005
+anchor_bottom = 0.102000006
+offset_left = 0.029999733
+offset_top = -0.048000336
+offset_right = 0.02999115
+offset_bottom = -0.09600067
+text = "glider"
+
+[node name="lightweight" type="Button" parent="CanvasLayer/library"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.053000003
+anchor_top = 0.12200001
+anchor_right = 0.88600004
+anchor_bottom = 0.17300001
+offset_left = -0.042000294
+offset_top = -0.056007385
+offset_right = -0.004005432
+offset_bottom = -0.104003906
+text = "lightweight"
+
+[node name="point" type="Button" parent="CanvasLayer/library"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11400001
+anchor_top = 0.19100001
+anchor_right = 0.754
+anchor_bottom = 0.24200001
+offset_left = -0.99600124
+offset_top = 0.231987
+offset_right = 0.04399872
+offset_bottom = 0.18399048
+text = "point"
+
+[connection signal="pressed" from="CanvasLayer/sideBar/run" to="." method="_on_run_pressed"]
+[connection signal="pressed" from="CanvasLayer/sideBar/noise" to="." method="_on_noise_pressed"]
+[connection signal="pressed" from="CanvasLayer/sideBar/clear" to="." method="_on_clear_pressed"]
+[connection signal="drag_ended" from="CanvasLayer/sideBar/HSlider" to="." method="_on_h_slider_drag_ended"]
+[connection signal="pressed" from="CanvasLayer/sideBar/save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="CanvasLayer/sideBar/load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="CanvasLayer/sideBar/library" to="." method="_on_library_pressed"]
+[connection signal="pressed" from="CanvasLayer/center/ButtonConfirm" to="." method="_on_button_confirm_pressed"]
+[connection signal="pressed" from="CanvasLayer/library/glider" to="." method="_on_glider_pressed"]
+[connection signal="pressed" from="CanvasLayer/library/lightweight" to="." method="_on_lightweight_pressed"]
+[connection signal="pressed" from="CanvasLayer/library/point" to="." method="_on_point_pressed"]

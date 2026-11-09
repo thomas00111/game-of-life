@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvjdqxpaqqkst"]
+
+[ext_resource type="Script" uid="uid://dmte0t3qsh4i2" path="res://test.gd" id="1_37kl0"]
+
+[node name="test" type="Node2D"]
+script = ExtResource("1_37kl0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(10, 10)
+
+[node name="gen" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
